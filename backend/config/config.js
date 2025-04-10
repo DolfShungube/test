@@ -1,0 +1,7 @@
+export const config={
+
+SUPABASE_URL:"https://zzcngtvcycpxidqgihey.supabase.co",
+SUPABASE_ANON_KEY:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6Y25ndHZjeWNweGlkcWdpaGV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyOTc0NTgsImV4cCI6MjA1OTg3MzQ1OH0.C43Fbt67RDOyKFtk0fTK5AMOSoOjbRorhWAyj62x5nU"
+}
+
+export default config
