@@ -9,12 +9,14 @@
     }
 
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
+
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 40px;">
 
   <h2 style="text-align: center;">Freelancio.</h2>
 
-  <form action="/register" method="post" style="max-width: 400px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+  <form id="form" style="max-width: 400px; margin: auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
     
     <!--<label for="First Names">First Names:</label><br>--><!--If you want OG design-->
     <input type="text" id="firstname" name="firstname" placeholder="Enter First Names" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
@@ -29,18 +31,20 @@
     <input type="password" id="password" name="password" placeholder="Enter Password" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
 
     <!--<label for="password">Password:</label><br>-->
-    <input type="password" id="password" name="password" placeholder="Re-enter Password" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
+    <input type="password" id="password2" name="password2" placeholder="Re-enter Password" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
 
     <!--<label for="Account Type">Account Type:</label><br>-->
-<select name="Account Type" id="Account Type"name="password" placeholder="Enter Password" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
-  <option value="">--Select Account Type--</option>
-  <option value="freelancer">Freelancer</option>
-  <option value="client">Client</option>
-  <option value="admin">Admin</option>
-</select><br>
-    <input type="submit" value="Register" style="width: 100%; background-color: #000000; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">
+    <select name="AccountType" id="AccountType"name="AccountType" required style="width: 100%; padding: 10px; margin: 8px 0;"><br>
+
+      <option value="">--Select Account Type--</option>
+      <option value="Freelancer">Freelancer</option>
+      <option value="Client">Client</option>
+      <option value="Admin">Admin</option>
+
+    </select><br>
+    <input type="submit" id ="register" value="Register" style="width: 100%; background-color: #000000; color: white; padding: 10px; border: none; border-radius: 4px; cursor: pointer;">
 
   </form>
-
+  <script type="module" src="../../../backend/register/register.js"></script>
 </body>
 </html>

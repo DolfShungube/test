@@ -1,0 +1,66 @@
+import { validateInputs, registerUser } from './register_functions.js';
+
+document.addEventListener("DOMContentLoaded", function() {
+    const usersMap = new Map();  
+    const usertype = document.getElementById("AccountType");  
+    const form = document.getElementById("form");  
+
+    let selectedtype = null;
+
+    
+    usertype.addEventListener("change", function() {
+        selectedtype = usertype.value;
+        console.log("Selected account type:", selectedtype);
+    });
+
+    function showAlert(message, type = 'info') {
+        Swal.fire({
+            title: type === 'success' ? 'Success!' : 'Oops!',
+            text: message,
+            icon: type,  // 'success', 'error', 'warning', 'info'
+            confirmButtonText: 'OK'
+        });
+    }
+
+    
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault(); 
+
+        
+        const firstname = document.getElementById("firstname").value;
+        const lastname = document.getElementById("lastname").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const password2 = document.getElementById("password2").value;
+        const registerBtn = document.getElementById("register");
+        
+        
+        const validationMessage = validateInputs(firstname, lastname, email, password, password2, selectedtype);
+        if(validationMessage){
+            showAlert(validationMessage,'error')
+        }
+
+        
+        registerBtn.disabled = true;
+        registerBtn.value = "Loading..."; 
+
+        const registerUserMessage = await registerUser(firstname, lastname, email, password, selectedtype);
+
+        registerBtn.disabled = false;
+        registerBtn.value = "Register";  
+
+        
+        registerBtn.disabled = false;
+        if(registerUserMessage === "User Registered"){
+            form.reset();
+            showAlert("Registration successful",'success');
+            console.log("User Registered", usersMap);
+            return usersMap;
+        }else{
+            showAlert(registerUserMessage, 'error');
+        }
+        
+        
+    });
+});
+
