@@ -1,7 +1,7 @@
-export const config={
+const config={
 
-SUPABASE_URL:"https://zzcngtvcycpxidqgihey.supabase.co",
-SUPABASE_ANON_KEY:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inp6Y25ndHZjeWNweGlkcWdpaGV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQyOTc0NTgsImV4cCI6MjA1OTg3MzQ1OH0.C43Fbt67RDOyKFtk0fTK5AMOSoOjbRorhWAyj62x5nU"
+SUPABASE_URL:"https://hvqfbffmslpfevltfuxr.supabase.co",
+SUPABASE_ANON_KEY:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh2cWZiZmZtc2xwZmV2bHRmdXhyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQzMjQ2ODcsImV4cCI6MjA1OTkwMDY4N30.3Kh5SzfAYeLO4Mb4Eu-j_mZJZ8GKWlhWO_tZO4e7taM"
 }
 
 export default config
