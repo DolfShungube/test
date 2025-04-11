@@ -53,7 +53,14 @@ document.addEventListener("DOMContentLoaded", function() {
         registerBtn.disabled = false;
         if(registerUserMessage === "User Registered"){
             form.reset();
-            showAlert("Registration successful",'success');
+            Swal.fire({
+                title:'Success!',
+                text: 'Registration successful',
+                icon: 'success',
+                confirmButtonText: 'OK'
+            }).then(()=>{
+                window.location.href = "index.html";
+            });
             console.log("User Registered", usersMap);
             return usersMap;
         }else{
