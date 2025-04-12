@@ -27,7 +27,7 @@ async function registerUser(firstname, lastname, email, password, selectedtype) 
 
     if(signUpError){
         console.log("SignUp error", signUpError);
-        return;
+        return signUpError;
     }
     console.log("I am about to insert into this table",selectedtype);
     
@@ -40,6 +40,7 @@ async function registerUser(firstname, lastname, email, password, selectedtype) 
         console.log("No user ID found after signup.");
         return;
     }
+
 
     const response = await supabase
     .from(selectedtype)
