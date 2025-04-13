@@ -1,7 +1,5 @@
-
-
-
- //bcrypt.hash()
+ import supabase from '../config/superbaseClient.js';
+import superbase from '../config/superbaseClient.js'
  export function getDetails(){
     const details={userType:"",email:"",password:""}
 
@@ -53,12 +51,76 @@ export function issueTracker(details,detailValues){
 
     if(!registrationDetailsPresent(detailValues)){
     issues.push("please fill in all the required details")
+    }else{
+        
     }
 
     return issues
 
 
 }
+
+
+export async function handleUserInput(detailValues){
+    const value=''
+    
+    try {
+
+        const {data,error} = await superbase.auth.signInWithPassword({
+            email: detailValues.email,
+            password: detailValues.password
+           })
+
+
+           if (error){
+               return error.message
+               }else{
+
+                const user = data.user;
+                try {
+                    const { data: Account,error: accountError } = await superbase
+                    .from(detailValues.userType) 
+                    .select('id')
+                    .eq('id', user.id)
+                    .single();
+
+                
+                if(accountError){
+                    return "you are not registered for the selected account Type"
+                     
+                }
+                return value   
+
+                    
+                } catch (error) {
+                   
+                    return error.message    
+                    
+                }
+
+               }
+        
+    } catch (error) {
+       return error.message
+        
+    }
+
+
+ }
+
+ export function showAlert(message, type = 'info') {
+    Swal.fire({
+        title: type === 'success' ? 'Success!' : 'Oops!',
+        text: message,
+        icon: type,  // 'success', 'error', 'warning', 'info'
+        confirmButtonText: 'OK'
+    });
+}
+
+
+
+
+
 
 
 

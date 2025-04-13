@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="../../../backend/login/signin.js" defer></script>
+  <script type="module" src="../../../backend/login/signinwithgoogle.js" defer></script>
 </head>
 <body>
 
@@ -24,11 +26,11 @@
       <option value="Freelancer">Freelancer</option>
     </select><br><br>
 
-    <a href="#" class="forgot-link">Forgot Password?</a>
+    <a href="./changePassword.html" class="forgot-link">Forgot Password?</a>
 
     <button type="submit" id="SignIn" class="btn-black">Sign In</button><br><br>
 
-    <button type="submit" id="SignInWithGoogle" class="btn-black google-btn">
+    <button type="button" id="SignInWithGoogle" class="btn-black google-btn">
       <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="Google icon" class="google-icon">
       Sign In with Google
     </button>

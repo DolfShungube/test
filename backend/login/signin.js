@@ -1,15 +1,14 @@
-import { getDetails, issueTracker,getDetailValues} from './utils.js';
-import superbase from '../config/superbaseClient.js'
+import { getDetails, issueTracker,getDetailValues,handleUserInput,showAlert} from './utils.js';
+
+
 //SuperPass#001
-
-
 const form= document.getElementById('form');
  form.addEventListener('submit',(e)=>{
   
     const details= getDetails();
     const detailValues=getDetailValues()
-    console.log(detailValues)
-
+    e.preventDefault()
+   
     let issues=issueTracker(details,detailValues)
 
     if(issues.length>0){
@@ -17,11 +16,32 @@ const form= document.getElementById('form');
 
      }else{
 
-        //submit to db
+
+
+      async function login() {
+       const value=  await handleUserInput(detailValues)
+         
+      if(value===''){
+   
+        window.location.href = detailValues.userType+'.html';
+
+      }else{
+         showAlert(value,'error')
+      }
+   }
+
+   login()
+
+
      }
 
 
 })
+
+
+
+
+
 
 
 
