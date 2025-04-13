@@ -1,4 +1,4 @@
-const { validateInputs, registerUser } = require('../register/register_functions.js');
+import { validateInputs, registerUser } = from '../register/register_functions.js';
 
 
 describe("Registration Logic",()=>{
