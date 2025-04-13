@@ -16,9 +16,6 @@ body{
   background-size: 500px 500px;
   background-position: right center;
 
-
-
-
 }
 .register-button{
   width: 100%; background-color: #000000; 
@@ -29,17 +26,14 @@ body{
   cursor: pointer;
   margin-top: 20px;
 }
-.business_picture{
-  width: 600px;
-  float: left;
-}
+
 .form{
   max-width: 400px; 
   margin: auto; 
   background: #fff; 
   padding: 20px; border-radius: 8px; 
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  margin-top: 100px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 30px;
 }
 .register-button:hover{
   opacity: 0.6;
@@ -52,8 +46,24 @@ body{
   font-size: 50px;
   color: rgb(9,9,9);
   margin-left: auto;
-  margin-bottom: 85px;
+  margin-bottom: 60px;
   margin-top: 0px;
   font-weight: bolder;
    
+}
+
+.icon-text-line {
+  margin-right: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.icon-text-line img.login-icon {
+  vertical-align: middle;
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
 }
