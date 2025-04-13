@@ -1,7 +1,4 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
-name: Node.js CI
+name: auto testing
 
 on:
   push:
@@ -10,10 +7,9 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
-  
     strategy:
       matrix:
         node-version: [18.x, 20.x, 22.x]
@@ -21,9 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js ${{ matrix.node-version }}
+    - name: setting up node
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+    - run: ../../backend/tests/register.test.js
 
-    - run: backend/tests/register.test.js
+
+
+
