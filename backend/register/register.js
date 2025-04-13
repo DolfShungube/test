@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const email = document.getElementById("email").value;
         const password = document.getElementById("password").value;
         const password2 = document.getElementById("password2").value;
-        const registerBtn = document.getElementById("register");
+        const registerBtn = document.getElementById("Register");
         
         
         const validationMessage = validateInputs(firstname, lastname, email, password, password2, selectedtype);
