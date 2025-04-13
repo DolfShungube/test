@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }else{
             showAlert(registerUserMessage, 'error');
         }
-        
+        window.location.href = "index.html";   
         
     });
 });

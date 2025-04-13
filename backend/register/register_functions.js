@@ -1,4 +1,5 @@
 import supabase  from "../config/superbaseClient.js";
+import {showAlert} from '../login/utils.js'
 
 function validateInputs(firstname, lastname, email, password, password2, selectedtype) {
     if (!firstname || !lastname || !email || !password || !password2 || !selectedtype) {
@@ -23,45 +24,24 @@ async function registerUser(firstname, lastname, email, password, selectedtype) 
 
         email:email,
         password:password,
+        options: {
+            data: {
+              firstname:firstname,
+              lastname:lastname,
+              table: selectedtype
+            }
+          }
     });
 
     if(signUpError){
-        console.log("SignUp error", signUpError);
-        return signUpError;
-    }
-    console.log("I am about to insert into this table",selectedtype);
-    
-    const userId = authData?.user?.id;
 
- 
-    //insert the details in our table
 
-    if (!userId) {
-        console.log("No user ID found after signup.");
+        showAlert(signUpError.message,'error')
+        
+       // console.log("SignUp error", signUpError);
         return;
     }
-
-
-    const response = await supabase
-    .from(selectedtype)
-    .insert([
-        {
-            id:userId,
-            firstname: firstname,
-            lastname: lastname,
-        }
-    ]);
-
-
-    if (response.error) {
-    console.error("Error inserting data: ", response.error.message); 
-    return "Error inserting data: " + response.error.message;
-    } else {
-    console.log("Details inserted successfully.");
-    return "User Registered";
-    }
-
-    
+ 
     
 }
 
