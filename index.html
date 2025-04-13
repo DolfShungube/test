@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Freelancio | Landing Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e6f0ff);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #333;
+      position: relative;
+    }
+
+    header {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    main {
+      padding: 4rem 2rem 2rem;
+      max-width: 700px;
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+
+    .btn-black {
+      background-color: #1a1a1a;
+      color: #fff;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-black:hover {
+      background-color: #333;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+    <header style="display: flex; align-items: center; padding: 1rem;">
+        <h1 style="font-size: 30px; font-weight: bold; display: flex; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+          Freelancio.
+          <img src="../../assets/cofee.png" alt="Coffee Mug" style="width: 30px; height: 40px; object-fit: contain;" />
+        </h1>
+      </header>
+    
+  <main>
+    <img src="../../assets/icon.png" alt="Freelancio Logo" />
+    <h1><strong>Welcome to Freelancio</strong></h1>
+    <p>A web-based platform where freelancers and clients collaborate, manage contracts, communicate, and track project progress seamlessly.</p>
+    <a href="../pages/signIn.html">
+        <button type="button" class="btn-black">Get Started</button>
+      </a>
+      
+      
+  </main>
+
+</body>
+</html>
