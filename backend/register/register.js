@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+
     
     form.addEventListener("submit", async function(event) {
         event.preventDefault(); 
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if(validationMessage){
             showAlert(validationMessage,'error')
         }
+
 
         
         registerBtn.disabled = true;
@@ -59,14 +61,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(()=>{
-                window.location.href = "index.html";
+                window.location.href = "./login.html";
             });
             console.log("User Registered", usersMap);
             return usersMap;
         }else{
             showAlert(registerUserMessage, 'error');
+            // window.location.href = "login.html";   
         }
-        window.location.href = "login.html";   
+
         
     });
 });
