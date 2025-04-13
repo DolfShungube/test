@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  
+}
+.password,.firstname,.lastname,.email,.AccountType{
+  border-radius: 40px;
+  border: 1px solid #ddd;
+}
+body{
+  font-family: Arial, sans-serif; 
+  background-color: #ffffff;
+  padding: 40px;
+
+  background-image: url('images/Laptopman.jpeg');
+  background-repeat: no-repeat;
+  background-size: 500px 500px;
+  background-position: right center;
+
+
+
+
+}
+.register-button{
+  width: 100%; background-color: #000000; 
+  color: white; 
+  padding: 10px; 
+  border: none; 
+  border-radius: 40px; 
+  cursor: pointer;
+  margin-top: 20px;
+}
+.business_picture{
+  width: 600px;
+  float: left;
+}
+.form{
+  max-width: 400px; 
+  margin: auto; 
+  background: #fff; 
+  padding: 20px; border-radius: 8px; 
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 100px;
+}
+.register-button:hover{
+  opacity: 0.6;
+}
+.logo{
+  width: 50px;
+}
+.title{
+  text-align: center;
+  font-size: 50px;
+  color: rgb(9,9,9);
+  margin-left: auto;
+  margin-bottom: 85px;
+  margin-top: 0px;
+  font-weight: bolder;
+   
+}
