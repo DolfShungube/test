@@ -10,7 +10,7 @@ return true
 
 function existingEmail(email){
 
-if(email=''){
+if(email====''){
     return true;
     
 }
