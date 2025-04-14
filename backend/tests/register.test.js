@@ -1,4 +1,24 @@
-import {existingEmail,issueTracker,registrationDetailsPresent} from '../login/utils.js'
+export function registrationDetailsPresent(details){
+
+    if(Object.values(details).includes('')){
+       return false
+    }
+
+return true
+
+}
+
+export function existingEmail(email){
+
+if(email!=''){
+    return true;
+    
+}
+
+return false;
+
+}
+
 /////
 
 
