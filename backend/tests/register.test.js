@@ -1,4 +1,5 @@
-import {existingEmail,issueTracker,registrationDetailsPresent} from '../login/utils'
+import {existingEmail,issueTracker,registrationDetailsPresent} from '../login/utils.js'
+/////
 
 
 test("checking if we recived an existing email from the server",()=>{
