@@ -1,4 +1,4 @@
-export function registrationDetailsPresent(details){
+ function registrationDetailsPresent(details){
 
     if(Object.values(details).includes('')){
        return false
@@ -8,7 +8,7 @@ return true
 
 }
 
-export function existingEmail(email){
+function existingEmail(email){
 
 if(email!=''){
     return true;
